@@ -1,0 +1,25 @@
+{
+  "cli": {
+    "version": ">= 3.9.0"
+  },
+  "build": {
+    "preview": {
+    },
+    "preview2": {
+      "android": {
+        "gradleCommand": ":app:assembleRelease"
+      }
+    },
+    "preview3": {
+      "developmentClient": true
+    },
+    "preview4": {
+      "distribution": "internal"
+    },
+    "production": {
+      "android": {
+        "image": "ubuntu-22.04-jdk-17-ndk-r21e"
+      }
+    }
+  }
+}

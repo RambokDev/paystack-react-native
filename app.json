@@ -2,6 +2,7 @@
   "expo": {
     "name": "paystack-react-native",
     "slug": "paystack-react-native",
+    "owner": "soluce",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
