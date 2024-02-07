@@ -3,7 +3,6 @@ import {
     Keyboard,
     SafeAreaView,
     Text,
-    Image,
     TextInput,
     TouchableOpacity,
     TouchableWithoutFeedback,
@@ -12,10 +11,11 @@ import {
 
 import {WebView} from 'react-native-webview';
 
-import OneTipLogo from '../../assets/onetip-logo.svg'
+// @ts-ignore
+import OneTipLogo from "../../assets/images/onetip-logo.svg"
 import styles from "./PaymentStyle"
 import {store} from "../../redux/store";
-import {paymentSucceeded} from "../../redux/slices/payment";
+import {paymentSucceeded} from "../../redux/slices/transactions";
 
 const FAKE_URL = "https://soluce-technologies.com"
 
@@ -87,7 +87,7 @@ export default function Payment() {
                 <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
                     <SafeAreaView style={{margin: 20, marginTop: 100}}>
                         <View style={{alignItems: 'center'}}>
-                            <OneTipLogo width={240} height={80}/>
+                            {/*<OneTipLogo width={240} height={80}/>*/}
                             <View style={{marginTop: 200, marginBottom: 200}}>
                                 <Text
                                     style={{fontSize: 30, lineHeight: 30, fontWeight: 'bold', marginBottom: 30}}>
@@ -97,7 +97,8 @@ export default function Payment() {
                                     <TextInput
                                         style={styles.tipText}
                                         keyboardType="numeric"
-                                        onChangeText={(e) => setAmount(e)}/>
+                                        onChangeText={(e:number) => setAmount(e)}
+                                    />
                                     <Text style={{fontSize: 24, lineHeight: 30}}> NGN</Text>
                                 </View>
                             </View>

@@ -4,7 +4,7 @@ const initialState = {
     success: false
 }
 
-const payment = createSlice({
+const transactions = createSlice({
 
     name: 'payment',
     initialState: initialState,
@@ -17,5 +17,5 @@ const payment = createSlice({
     }
 })
 
-export const {paymentSucceeded} = payment.actions
-export default payment
+export const {paymentSucceeded} = transactions.actions
+export default transactions

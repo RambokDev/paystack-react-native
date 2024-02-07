@@ -2,7 +2,7 @@ import {Provider} from "react-redux";
 
 import {store} from "./redux/store";
 
-import MainNavigator from "./navigator/MainNavigator";
+import MainNavigator from "./navigators/MainNavigator";
 
 export default function App() {
 

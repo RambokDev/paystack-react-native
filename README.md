@@ -6,7 +6,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/RambokDev/paystack-react-native">
-    <img src="assets/logo.png" alt="Logo" width="80" height="80">
+    <img src="assets/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 <h3 align="center">Paystack React Native</h3>
   <p align="center">
@@ -55,7 +55,7 @@ Follow this different steps in order to reproduce the demonstration
    ```sh
    npm install
    ```
-4. Enter your API url in `app.config.js`
+4. Enter your API url in `app.config.ts`
    ```js
    apiUrl: process.env.API_URL ?? 'https://your-api-url/'
    ```
@@ -74,24 +74,6 @@ Follow this different steps in order to reproduce the demonstration
    npx expo prebuild
    ```
 
-#### 2. Run your app
-
-   ```sh
-    npx expo run:android
-   ```
-
-If an error occurred, you may add 'local.properties' file in android folder with the following code :
-
-   ```sh
-    sdk.dir = /xxxxx/userxxxx/Library/Android/sdk
-   ```
-
-or you can set an environment variable :
-
-   ```sh
-    export ANDROID_HOME=/xxxxx/userxxxx/Library/Android/sdk
-   ```
-
 #### 3. Build your app :
 
 With expo services
@@ -106,27 +88,6 @@ Locally
     eas build -p android --profile preview --local 
    ```
 
-Example of app.config.js
-
-```
-
-module.exports = ({config}) => {
-    return {
-        ...config,
-        extra: {
-            apiUrl: process.env.API_URL ?? 'https://www.api-example.com/',
-            eas: {
-                projectId: "xxxxxxx"
-            },
-            runtimeVersion: {
-                policy: "sdkVersion"
-            },
-
-        }
-    }
-}
-
-```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

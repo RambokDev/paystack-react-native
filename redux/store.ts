@@ -4,7 +4,7 @@ import {setupListeners} from '@reduxjs/toolkit/query'
 // import {FLUSH, PAUSE, PERSIST, persistReducer, persistStore, PURGE, REGISTER, REHYDRATE} from 'redux-persist'
 
 import {api} from "./services/api";
-import payment from "./slices/payment";
+import transactions from "./slices/transactions";
 
 // const persistConfig = {
 //     key: 'root',
@@ -13,7 +13,7 @@ import payment from "./slices/payment";
 
 const rootReducer = combineReducers({
     [api.reducerPath]: api.reducer,
-    payment: payment.reducer,
+    payment: transactions.reducer,
 })
 
 // const persistedReducer = persistReducer(persistConfig, rootReducer)
